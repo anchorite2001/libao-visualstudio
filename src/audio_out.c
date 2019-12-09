@@ -49,7 +49,9 @@ static int dlclose(void *handle) { return 0; }
 #ifndef _MSC_VER
 # include <unistd.h>
 #endif
+#ifdef HAVE_DLOPEN
 #include <dirent.h>
+#endif
 
 #include "ao/ao.h"
 #include "ao_private.h"
